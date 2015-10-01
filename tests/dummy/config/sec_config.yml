@@ -1,0 +1,6 @@
+defaults: &defaults
+  foo: baz
+development:
+  <<: *defaults
+test:
+  <<: *defaults
