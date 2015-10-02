@@ -11,7 +11,7 @@ module.exports = {
     var yamljs = require('yamljs');
 
     var configPath = path.dirname(this.project.configPath());
-    var addonOptions = (this.app && this.app.options.appConfig) || {};
+    var addonOptions = (this.app && this.app.options.yamlConfig) || {};
     var configFileNames = addonOptions.fileNames || ['config.yml', 'sec_config.yml'];
 
     return configFileNames.reduce(function(acc, fileName) {
