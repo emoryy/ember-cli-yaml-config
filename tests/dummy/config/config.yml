@@ -1,5 +1,12 @@
 defaults: &defaults
-  foo: bar
+  override: foo
+  deepMerge:
+    one: 1
+  first: a
+  array:
+    - 1
+    - 2
+    - 3
 development:
   <<: *defaults
 test:

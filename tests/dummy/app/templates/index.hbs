@@ -1,3 +1,30 @@
-<h1>
-  {{ foo }}
-</h1>
+<dl>
+  <dt>override</dt>
+  <dd>{{ override }}</dd>
+</dl>
+
+<dl>
+  <dt>deepMerge</dt>
+  {{#each-in deepMerge as |key value|}}
+    <dd>
+      {{ key }}: {{ value }}
+    </dd>
+  {{/each-in}}
+</dl>
+
+<dl>
+  <dt>first</dt>
+  <dd>{{ first }}</dd>
+</dl>
+
+<dl>
+  <dt>second</dt>
+  <dd>{{ second }}</dd>
+</dl>
+
+<dl>
+  <dt>array</dt>
+  {{#each array as |value|}}
+    <dd>{{ value }}</dd>
+  {{/each}}
+</dl>
