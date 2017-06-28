@@ -19,7 +19,8 @@ module.exports = {
       var config = {};
 
       if(existsSync(configFilePath)) {
-        config = yamljs.load(configFilePath)[environment] || {};
+        const configFileContent = yamljs.load(configFilePath);
+        config = configFileContent[environment] || configFileContent || {};
       } else {
         if(addonOptions.warnAboutNonexistingFiles) {
           console.warn(
