@@ -4,14 +4,14 @@
 module.exports = {
   name: 'ember-cli-yaml-config',
 
-  config: function(environment) {
+  config: function(environment, appConfig) {
     var existsSync = require('exists-sync');
     var lodash = require('lodash');
     var path = require('path');
     var yamljs = require('yamljs');
 
     var configPath = path.dirname(this.project.configPath());
-    var addonOptions = (this.app && this.app.options.yamlConfig) || {};
+    var addonOptions = appConfig.yamlConfig || {};
     var configFileNames = addonOptions.fileNames || ['config.yml', 'sec_config.yml'];
 
     return configFileNames.reduce(function(acc, fileName) {
